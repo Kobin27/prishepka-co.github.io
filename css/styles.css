@@ -100,7 +100,7 @@ h1, h2, h3 {
     height: 85vh;
     margin-top: -200px;
     padding-top: 200px;
-    background-image: url(/img/Hero_img.png);
+    background-image: url(../img/Hero_img.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #e6f0fa; /* Светло-голубой фон */
@@ -159,4 +159,5 @@ h1, h2, h3 {
     color: white;
     padding: 20px 0;
     text-align: center;
+
 }
