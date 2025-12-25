@@ -20,7 +20,8 @@
 
 
 body {
-    background-color: #e6f0fa; /* Светло-голубой фон */
+    /* background-color: #e6f0fa; */ /* Светло-голубой фон */
+    background: #f8ecd260; /* Кремовый фон */
 }
 
 :root {
@@ -91,17 +92,17 @@ h1, h2, h3 {
 
 .logo {
     background: #f8ecd260;
-    /* border: #4A2917 2px solid; */
     border-radius: 100px 20px 100px 100px;
+}
+
+.logo-text {
+    padding-bottom: 30px;
 }
 
 .logo-text h1 {
     margin: 0 10px 0 0;
     font-family: Sofia Sans;
     font-weight: 1000;
-}
-.logo-text p {
-    margin-bottom: 30px;
 }
 
 .nav a:not(.btn) {
