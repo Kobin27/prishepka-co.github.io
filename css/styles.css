@@ -1,21 +1,6 @@
 /* Базовые стили */
 * {
     font-family: Sofia Sans, sans-serif; /* Рекомендуется заменить на Montserrat или Roboto */
-    margin: 0;
-    padding: 0;
-    color: #1f1f1f;
-    box-sizing: border-box;
-}
-
-.rubik-gemstones-regular {
-  font-family: "Rubik Gemstones", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.sofia-sans {
-  font-family: "Sofia Sans", sans-serif;
-  font-optical-sizing: auto;
 }
 
 
@@ -43,6 +28,7 @@ h1, h2, h3 {
 .btn {
     background-color: #5d9ee7; /* Яркий синий - цвет прачечной */
     color: white;
+    font-size: 1.1em;
     border: none;
     padding: 15px 20px;
     border-radius: 20px;
@@ -63,7 +49,6 @@ h1, h2, h3 {
 .btn-large {
     display: inline-block;
     padding: 15px 30px;
-    font-size: 1.2em;
     position: absolute;
     bottom: calc(var(--index) * 3);
     left: calc(50% - 144px);
@@ -87,22 +72,32 @@ h1, h2, h3 {
 
 .logo-icon {
     width: 100px;
-    margin-right: 10px;
+    margin-right: 5px;
+    z-index: 2;
 }
 
 .logo {
-    background: #f8ecd260;
-    border-radius: 100px 20px 100px 100px;
+    margin-right: 50px;
+    position: relative;
 }
 
 .logo-text {
-    padding-bottom: 30px;
+    left: -25px;
+    padding: 10px 20px 10px 25px;
+    background: #f8ecd260;
+    border-radius: 0 100px 100px 0;
+    position: relative;
+    z-index: 0;
 }
 
 .logo-text h1 {
-    margin: 0 10px 0 0;
-    font-family: Sofia Sans;
+    font-size: 1.9em;
     font-weight: 1000;
+    line-height: 30px;
+}
+
+.logo-text p {
+    margin-left: 2px;
 }
 
 .nav a:not(.btn) {
@@ -124,9 +119,9 @@ h1, h2, h3 {
 }
 
 .hero-content {
-    height: 102vh;
-    margin-top: -160px;
-    padding-top: 160px;
+    height: 100vh;
+    margin-top: -140px;
+    padding-top: 140px;
     background-image: url(../img/Hero_img.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,6 +148,7 @@ h1, h2, h3 {
 .hero-text p {
     font-family: Rubik Gemstones;
     font-size: 1.3em;
+    color: #333;
 }
 
 
