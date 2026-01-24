@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&family=Sofia+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <script type="module" src="./ScrollSlider/index.js" defer></script>
 </head>
 
 <body>
@@ -46,12 +47,31 @@
     <section id="services" class="section services">
         <div class="container">
             <h3>✨ Наши Услуги</h3>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h4>Стандартная Стирка</h4>
-                    <p>Стирка повседневной одежды и белья. Идеально для еженедельной стирки.</p>
-                </div>
-                </div>
+            <scroll-slider-track class="scroll-slider-track">
+                <a href="#" class="service-card">
+                    <img src="/img/Service_coat.png" alt="" class="service-card_img">
+                    <div class="service-card_txt">
+                        <h4>Стандартная Стирка</h4>
+                        <p>Стирка повседневной одежды и белья</p>
+                    </div>
+                </a>
+                <a href="#" class="service-card">
+                    <img src="/img/Service_rug.png" alt="" class="service-card_img">
+                    <div class="service-card_txt">
+                        <h4>Стирка пледов</h4>
+                        <p>Вдохнем вторую жизнь в ваши пледы и одеяла</p>
+                    </div>
+                </a>
+                <a href="#" class="service-card">
+                    <img src="/img/Service_curtains.png" alt="" class="service-card_img">   
+                    <div class="service-card_txt">
+                        <h4>Стирка штор</h4>
+                        <p>Шторы снова как новые</p>
+                    </div>
+                </a>
+                
+            </scroll-slider-track>
+            <button id="next-btn"><img src="/img/icon/next_btn.svg" alt=""></button>
         </div>
     </section>
     
@@ -84,6 +104,13 @@
             <p>&copy; 2025 Прищепка & Co. Все права защищены.</p>
             </div>
     </footer>
+    <script>
+        const nextBtn = document.getElementById("next-btn");
+        const ScrollSliderTrack = document.querySelector("scroll-slider-track")
 
+        nextBtn.addEventListener("click", () => {
+            ScrollSliderTrack.scrollToNext();
+        });
+    </script>
 </body>
 </html>
