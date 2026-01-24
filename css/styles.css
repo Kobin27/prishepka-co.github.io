@@ -1,0 +1,222 @@
+@import "../ScrollSlider/style.css";
+
+/* Базовые стили */
+* {
+    font-family: Sofia Sans, sans-serif; /* Рекомендуется заменить на Montserrat или Roboto */
+}
+
+
+body {
+    /* background-color: #e6f0fa;  Светло-голубой фон */
+    background: #f8ecd260; /*Кремовый фон*/
+}
+
+:root {
+ --index: calc(1vw + 1vh);
+ --transition: 1s cubic-bezier(.05, .5, 0, 1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #1a2a47; /* Темно-синий/графитовый для заголовков */
+}
+
+/* Кнопки */
+.btn {
+    background-color: #5d9ee7; /* Яркий синий - цвет прачечной */
+    color: white;
+    font-size: calc(var(--index) * .6);
+    border: none;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: calc(var(--index) * .06);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: #4a8bcc;
+    transform: scale(1.01);
+}
+
+.btn-large {
+    display: inline-block;
+    padding: 15px 30px;
+    position: absolute;
+    bottom: calc(var(--index) * 3);
+    left: calc(50% - 144px);
+}
+
+/* Шапка */
+.header {
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.logo-icon {
+    width: 100px;
+    margin-right: 5px;
+    z-index: 2;
+}
+
+.logo {
+    margin-right: 50px;
+    position: relative;
+}
+
+.logo-text {
+    left: -25px;
+    padding: 10px 20px 10px 25px;
+    background: #f8ecd260;
+    border-radius: 0 100px 100px 0;
+    position: relative;
+    z-index: 0;
+}
+
+.logo-text h1 {
+    font-size: 1.9em;
+    font-weight: 1000;
+    line-height: 30px;
+}
+
+.logo-text p {
+    margin-left: 2px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--index) * 2);
+}
+
+.nav a:not(.btn) {
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.nav a:not(.btn):hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Главный экран */
+
+.hero-content {
+    height: 100vh;
+    margin-top: -140px;
+    padding-top: 140px;
+    background-image: url(../img/Hero_img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    text-align: center;
+	text-transform: uppercase;
+	line-height: 2em;
+}
+
+.hero-text {
+    height: 100%;
+    padding: calc(var(--index) * 3);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-text h2 {
+    margin: calc(var(--index)) 0 50px;
+    font-size: 3.5em;
+    line-height: calc(var(--index) * 3.5);
+    font-family: Rubik Gemstones;
+}
+
+.hero-text p {
+    font-family: Rubik Gemstones;
+    font-size: 1.3em;
+    color: #333;
+}
+
+
+
+/* Секции */
+.section {
+    /* background-image: url(/img/TableTop.png);
+    background-size: cover; */
+    padding: 60px 0;
+}
+
+.services {
+}
+
+.scroll-slider-track {
+    border-radius: 10px;
+    gap: 30px;
+    padding: 30px;
+}
+
+.service-card {
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card_img {
+    min-height: 736px;
+    min-width: 736px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.service-card_txt {
+    font-size: 16px;
+    position: absolute;
+    padding: 10px 15px;
+    bottom: 40px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.603);
+}
+
+/* Форма */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Футер */
+.footer {
+    background-color: #1a2a47;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
